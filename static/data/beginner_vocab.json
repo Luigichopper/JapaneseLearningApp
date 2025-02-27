@@ -1,0 +1,796 @@
+{
+  "vocabulary": [
+    {
+      "japanese": "こんにちは",
+      "romaji": "konnichiwa",
+      "english": "Hello",
+      "category": "greetings",
+      "notes": "Used during the day",
+      "example": "こんにちは、元気ですか？ (Hello, how are you?)"
+    },
+    {
+      "japanese": "おはよう",
+      "romaji": "ohayou",
+      "english": "Good morning",
+      "category": "greetings",
+      "notes": "Casual form",
+      "example": "おはよう！ (Good morning!)"
+    },
+    {
+      "japanese": "おはようございます",
+      "romaji": "ohayou gozaimasu",
+      "english": "Good morning",
+      "category": "greetings",
+      "notes": "Polite form",
+      "example": "おはようございます、先生。 (Good morning, teacher.)"
+    },
+    {
+      "japanese": "こんばんは",
+      "romaji": "konbanwa",
+      "english": "Good evening",
+      "category": "greetings",
+      "notes": "Used in the evening",
+      "example": "こんばんは、お元気ですか？ (Good evening, how are you?)"
+    },
+    {
+      "japanese": "さようなら",
+      "romaji": "sayounara",
+      "english": "Goodbye",
+      "category": "greetings",
+      "notes": "Formal goodbye, implies long parting",
+      "example": "さようなら、また会いましょう。 (Goodbye, let's meet again.)"
+    },
+    {
+      "japanese": "じゃあね",
+      "romaji": "jaa ne",
+      "english": "See you later",
+      "category": "greetings",
+      "notes": "Casual goodbye",
+      "example": "じゃあね、また明日！ (See you later, tomorrow again!)"
+    },
+    {
+      "japanese": "ありがとう",
+      "romaji": "arigatou",
+      "english": "Thank you",
+      "category": "greetings",
+      "notes": "Casual form",
+      "example": "ありがとう！ (Thank you!)"
+    },
+    {
+      "japanese": "ありがとうございます",
+      "romaji": "arigatou gozaimasu",
+      "english": "Thank you",
+      "category": "greetings",
+      "notes": "Polite form",
+      "example": "ありがとうございます。 (Thank you very much.)"
+    },
+    {
+      "japanese": "すみません",
+      "romaji": "sumimasen",
+      "english": "Excuse me/I'm sorry",
+      "category": "greetings",
+      "notes": "Used for both apologies and to get attention",
+      "example": "すみません、トイレはどこですか？ (Excuse me, where is the bathroom?)"
+    },
+    {
+      "japanese": "はい",
+      "romaji": "hai",
+      "english": "Yes",
+      "category": "basics",
+      "notes": "Formal affirmative",
+      "example": "はい、分かりました。 (Yes, I understand.)"
+    },
+    {
+      "japanese": "いいえ",
+      "romaji": "iie",
+      "english": "No",
+      "category": "basics",
+      "notes": "Polite negative",
+      "example": "いいえ、結構です。 (No, I'm fine.)"
+    },
+    {
+      "japanese": "私",
+      "romaji": "watashi",
+      "english": "I/me",
+      "category": "basics",
+      "notes": "Gender neutral pronoun",
+      "example": "私は学生です。 (I am a student.)"
+    },
+    {
+      "japanese": "あなた",
+      "romaji": "anata",
+      "english": "You",
+      "category": "basics",
+      "notes": "Often omitted in conversation",
+      "example": "あなたは日本人ですか？ (Are you Japanese?)"
+    },
+    {
+      "japanese": "これ",
+      "romaji": "kore",
+      "english": "This",
+      "category": "basics",
+      "notes": "For objects near the speaker",
+      "example": "これは何ですか？ (What is this?)"
+    },
+    {
+      "japanese": "それ",
+      "romaji": "sore",
+      "english": "That",
+      "category": "basics",
+      "notes": "For objects near the listener",
+      "example": "それはペンです。 (That is a pen.)"
+    },
+    {
+      "japanese": "あれ",
+      "romaji": "are",
+      "english": "That over there",
+      "category": "basics",
+      "notes": "For objects away from both speaker and listener",
+      "example": "あれは図書館です。 (That over there is the library.)"
+    },
+    {
+      "japanese": "どこ",
+      "romaji": "doko",
+      "english": "Where",
+      "category": "question words",
+      "notes": "Used to ask for location",
+      "example": "トイレはどこですか？ (Where is the toilet?)"
+    },
+    {
+      "japanese": "誰",
+      "romaji": "dare",
+      "english": "Who",
+      "category": "question words",
+      "notes": "Used to ask about people",
+      "example": "彼は誰ですか？ (Who is he?)"
+    },
+    {
+      "japanese": "何",
+      "romaji": "nani/nan",
+      "english": "What",
+      "category": "question words",
+      "notes": "Basic question word",
+      "example": "これは何ですか？ (What is this?)"
+    },
+    {
+      "japanese": "いつ",
+      "romaji": "itsu",
+      "english": "When",
+      "category": "question words",
+      "notes": "Used to ask about time",
+      "example": "いつ日本に行きましたか？ (When did you go to Japan?)"
+    },
+    {
+      "japanese": "一",
+      "romaji": "ichi",
+      "english": "One",
+      "category": "numbers",
+      "notes": "First Japanese number",
+      "example": "一個ください。 (One piece, please.)"
+    },
+    {
+      "japanese": "二",
+      "romaji": "ni",
+      "english": "Two",
+      "category": "numbers",
+      "notes": "Second Japanese number",
+      "example": "二人います。 (There are two people.)"
+    },
+    {
+      "japanese": "三",
+      "romaji": "san",
+      "english": "Three",
+      "category": "numbers",
+      "notes": "Third Japanese number",
+      "example": "三歳です。 (I'm three years old.)"
+    },
+    {
+      "japanese": "四",
+      "romaji": "shi/yon",
+      "english": "Four",
+      "category": "numbers",
+      "notes": "\"Shi\" also means death, so \"yon\" is often used instead",
+      "example": "四回見ました。 (I saw it four times.)"
+    },
+    {
+      "japanese": "五",
+      "romaji": "go",
+      "english": "Five",
+      "category": "numbers",
+      "notes": "Fifth Japanese number",
+      "example": "五分待ってください。 (Please wait five minutes.)"
+    },
+    {
+      "japanese": "六",
+      "romaji": "roku",
+      "english": "Six",
+      "category": "numbers",
+      "notes": "Sixth Japanese number",
+      "example": "六時に起きます。 (I wake up at six o'clock.)"
+    },
+    {
+      "japanese": "七",
+      "romaji": "nana/shichi",
+      "english": "Seven",
+      "category": "numbers",
+      "notes": "Both 'nana' and 'shichi' are used depending on context",
+      "example": "七回練習しました。 (I practiced seven times.)"
+    },
+    {
+      "japanese": "八",
+      "romaji": "hachi",
+      "english": "Eight",
+      "category": "numbers",
+      "notes": "Eighth Japanese number",
+      "example": "八月に日本に行きます。 (I will go to Japan in August.)"
+    },
+    {
+      "japanese": "九",
+      "romaji": "kyuu/ku",
+      "english": "Nine",
+      "category": "numbers",
+      "notes": "'Kyuu' is more common, but 'ku' is used in some compounds",
+      "example": "九時に学校が始まります。 (School starts at nine o'clock.)"
+    },
+    {
+      "japanese": "十",
+      "romaji": "juu",
+      "english": "Ten",
+      "category": "numbers",
+      "notes": "Basic unit for decimal system in Japanese",
+      "example": "十人の学生がいます。 (There are ten students.)"
+    },
+    {
+      "japanese": "十一",
+      "romaji": "juuichi",
+      "english": "Eleven",
+      "category": "numbers",
+      "notes": "Literally 'ten' and 'one'",
+      "example": "もう十一時ですか。 (Is it 11'o clock?)"
+    },
+    {
+      "japanese": "二十",
+      "romaji": "nijuu",
+      "english": "Twenty",
+      "category": "numbers",
+      "notes": "Literally 'two tens'",
+      "example": "私は二十歳です。 (I am twenty years old.)"
+    },
+    {
+      "japanese": "三十",
+      "romaji": "sanjuu",
+      "english": "Thirty",
+      "category": "numbers",
+      "notes": "Literally 'three tens'",
+      "example": "三十分待ちました。 (I waited for thirty minutes.)"
+    },
+    {
+      "japanese": "四十",
+      "romaji": "yonjuu",
+      "english": "Forty",
+      "category": "numbers",
+      "notes": "Literally 'four tens'",
+      "example": "四十歳の誕生日おめでとう！ (Happy fortieth birthday!)"
+    },
+    {
+      "japanese": "五十",
+      "romaji": "gojuu",
+      "english": "Fifty",
+      "category": "numbers",
+      "notes": "Literally 'five tens'",
+      "example": "このバッグは五十ドルです。 (This bag is fifty dollars.)"
+    },
+    {
+      "japanese": "百",
+      "romaji": "hyaku",
+      "english": "Hundred",
+      "category": "numbers",
+      "notes": "Basic unit for hundreds",
+      "example": "百円のコインを持っています。 (I have a one hundred yen coin.)"
+    },
+    {
+      "japanese": "二百",
+      "romaji": "nihyaku",
+      "english": "Two hundred",
+      "category": "numbers",
+      "notes": "Literally 'two hundreds'",
+      "example": "この本は二百ページあります。 (This book has two hundred pages.)"
+    },
+    {
+      "japanese": "三百",
+      "romaji": "sanbyaku",
+      "english": "Three hundred",
+      "category": "numbers",
+      "notes": "Note the sound change: hyaku → byaku",
+      "example": "三百人が参加しました。 (Three hundred people participated.)"
+    },
+    {
+      "japanese": "千",
+      "romaji": "sen",
+      "english": "Thousand",
+      "category": "numbers",
+      "notes": "Basic unit for thousands",
+      "example": "千円を払いました。 (I paid one thousand yen.)"
+    },
+    {
+      "japanese": "二千",
+      "romaji": "nisen",
+      "english": "Two thousand",
+      "category": "numbers",
+      "notes": "Literally 'two thousands'",
+      "example": "二千年に日本に行きました。 (I went to Japan in the year 2000.)"
+    },
+    {
+      "japanese": "三千",
+      "romaji": "sanzen",
+      "english": "Three thousand",
+      "category": "numbers",
+      "notes": "Note the sound change: sen → zen",
+      "example": "この町には三千人が住んでいます。 (Three thousand people live in this town.)"
+    },
+    {
+      "japanese": "万",
+      "romaji": "man",
+      "english": "Ten thousand",
+      "category": "numbers",
+      "notes": "Important numerical unit in Japanese",
+      "example": "一万円札を持っています。 (I have a 10,000 yen bill.)"
+    },
+    {
+      "japanese": "十万",
+      "romaji": "juuman",
+      "english": "Hundred thousand",
+      "category": "numbers",
+      "notes": "Literally 'ten ten-thousands'",
+      "example": "彼の車は十万ドルしました。 (His car cost a hundred thousand dollars.)"
+    },
+    {
+      "japanese": "百万",
+      "romaji": "hyakuman",
+      "english": "Million",
+      "category": "numbers",
+      "notes": "Literally 'hundred ten-thousands'",
+      "example": "その会社は百万ドルの利益を上げました。 (That company made a profit of one million dollars.)"
+    },
+    {
+      "japanese": "千万",
+      "romaji": "senman",
+      "english": "Ten million",
+      "category": "numbers",
+      "notes": "Literally 'thousand ten-thousands'",
+      "example": "この建物は千万円で売られました。 (This building was sold for ten million yen.)"
+    },
+    {
+      "japanese": "億",
+      "romaji": "oku",
+      "english": "Hundred million",
+      "category": "numbers",
+      "notes": "One of the largest commonly used number units",
+      "example": "彼は一億円を稼ぎました。 (He earned one hundred million yen.)"
+    },
+    {
+      "japanese": "兆",
+      "romaji": "chou",
+      "english": "Trillion",
+      "category": "numbers",
+      "notes": "Equal to one million million (10^12)",
+      "example": "日本の国家予算は数兆円です。 (Japan's national budget is several trillion yen.)"
+    },
+    {
+      "japanese": "半分",
+      "romaji": "hanbun",
+      "english": "Half",
+      "category": "numbers",
+      "notes": "Commonly used fraction",
+      "example": "ケーキの半分を食べました。 (I ate half of the cake.)"
+    },
+    {
+      "japanese": "一つ",
+      "romaji": "hitotsu",
+      "english": "One (thing)",
+      "category": "counters",
+      "notes": "Japanese counter for general objects",
+      "example": "リンゴを一つください。 (Please give me one apple.)"
+    },
+    {
+      "japanese": "二つ",
+      "romaji": "futatsu",
+      "english": "Two (things)",
+      "category": "counters",
+      "notes": "Japanese counter for general objects",
+      "example": "二つの選択肢があります。 (There are two options.)"
+    },
+    {
+      "japanese": "〜つ",
+      "romaji": "~tsu",
+      "english": "General counter (1-10)",
+      "category": "counters",
+      "notes": "Used for counting general objects, only used for numbers 1-10",
+      "example": "りんごを三つ買いました。 (I bought three apples.)"
+    },
+    {
+      "japanese": "〜個",
+      "romaji": "~ko",
+      "english": "Small objects counter",
+      "category": "counters",
+      "notes": "Used for small, often round objects like fruits, eggs, stones",
+      "example": "卵を二個使いました。 (I used two eggs.)"
+    },
+    {
+      "japanese": "〜人",
+      "romaji": "~nin",
+      "english": "People counter",
+      "category": "counters",
+      "notes": "Standard counter for counting people, but 1 person is 'hitori' and 2 people is 'futari'",
+      "example": "パーティーには十人が来ました。 (Ten people came to the party.)"
+    },
+    {
+      "japanese": "一人",
+      "romaji": "hitori",
+      "english": "One person",
+      "category": "counters",
+      "notes": "Irregular form for counting one person",
+      "example": "一人で映画を見に行きました。 (I went to see a movie alone.)"
+    },
+    {
+      "japanese": "二人",
+      "romaji": "futari",
+      "english": "Two people",
+      "category": "counters",
+      "notes": "Irregular form for counting two people",
+      "example": "二人で夕食を食べました。 (We had dinner together, just the two of us.)"
+    },
+    {
+      "japanese": "〜名",
+      "romaji": "~mei",
+      "english": "People counter (formal)",
+      "category": "counters",
+      "notes": "Polite/formal version of the people counter",
+      "example": "会議に五名の方が参加されました。 (Five people attended the meeting.)"
+    },
+    {
+      "japanese": "〜匹",
+      "romaji": "~hiki",
+      "english": "Small animals counter",
+      "category": "counters",
+      "notes": "Used for small to medium animals like cats, dogs, fish, insects",
+      "example": "猫を二匹飼っています。 (I have two cats.)"
+    },
+    {
+      "japanese": "〜頭",
+      "romaji": "~tou",
+      "english": "Large animals counter",
+      "category": "counters",
+      "notes": "Used for large animals like horses, cows, elephants",
+      "example": "農場には牛が三頭います。 (There are three cows at the farm.)"
+    },
+    {
+      "japanese": "〜羽",
+      "romaji": "~wa",
+      "english": "Birds counter",
+      "category": "counters",
+      "notes": "Used specifically for birds and rabbits",
+      "example": "庭に鳥が五羽います。 (There are five birds in the garden.)"
+    },
+    {
+      "japanese": "〜本",
+      "romaji": "~hon",
+      "english": "Long objects counter",
+      "category": "counters",
+      "notes": "Used for long cylindrical objects like bottles, pens, trees",
+      "example": "鉛筆を三本買いました。 (I bought three pencils.)"
+    },
+    {
+      "japanese": "〜枚",
+      "romaji": "~mai",
+      "english": "Flat objects counter",
+      "category": "counters",
+      "notes": "Used for flat objects like paper, photos, shirts, plates",
+      "example": "写真を十枚プリントしました。 (I printed ten photos.)"
+    },
+    {
+      "japanese": "〜冊",
+      "romaji": "~satsu",
+      "english": "Books counter",
+      "category": "counters",
+      "notes": "Used for books, magazines, notebooks",
+      "example": "図書館で本を二冊借りました。 (I borrowed two books from the library.)"
+    },
+    {
+      "japanese": "〜杯",
+      "romaji": "~hai",
+      "english": "Cups/glasses counter",
+      "category": "counters",
+      "notes": "Used for counting cups, glasses, or servings of drinks",
+      "example": "コーヒーを一杯ください。 (One cup of coffee, please.)"
+    },
+    {
+      "japanese": "〜台",
+      "romaji": "~dai",
+      "english": "Machines counter",
+      "category": "counters",
+      "notes": "Used for vehicles, machines, and electronic equipment",
+      "example": "我が家には車が二台あります。 (We have two cars in our family.)"
+    },
+    {
+      "japanese": "〜着",
+      "romaji": "~chaku",
+      "english": "Clothes counter",
+      "category": "counters",
+      "notes": "Used for full outfits of clothing",
+      "example": "新しいシャツを三着買いました。 (I bought three new shirts.)"
+    },
+    {
+      "japanese": "〜足",
+      "romaji": "~soku",
+      "english": "Footwear counter",
+      "category": "counters",
+      "notes": "Used for shoes, socks, and pairs of footwear",
+      "example": "靴下を二足洗いました。 (I washed two pairs of socks.)"
+    },
+    {
+      "japanese": "〜回",
+      "romaji": "~kai",
+      "english": "Frequency counter",
+      "category": "counters",
+      "notes": "Used for counting the number of times something happens",
+      "example": "この映画を三回見ました。 (I watched this movie three times.)"
+    },
+    {
+      "japanese": "〜度",
+      "romaji": "~do",
+      "english": "Degrees/occurrences counter",
+      "category": "counters",
+      "notes": "Used for counting degrees (temperature, angles) or occurrences",
+      "example": "今日の気温は25度です。 (Today's temperature is 25 degrees.)"
+    },
+    {
+      "japanese": "〜歳/〜才",
+      "romaji": "~sai",
+      "english": "Age counter",
+      "category": "counters",
+      "notes": "Used for counting age; 歳 is the formal kanji, 才 is often used in everyday writing",
+      "example": "私の息子は五歳です。 (My son is five years old.)"
+    },
+    {
+      "japanese": "〜階",
+      "romaji": "~kai",
+      "english": "Floors counter",
+      "category": "counters",
+      "notes": "Used for counting floors/levels of a building",
+      "example": "私は三階に住んでいます。 (I live on the third floor.)"
+    },
+    {
+      "japanese": "〜年",
+      "romaji": "~nen",
+      "english": "Years counter",
+      "category": "counters",
+      "notes": "Used for counting years",
+      "example": "日本に三年住んでいました。 (I lived in Japan for three years.)"
+    },
+    {
+      "japanese": "〜ヶ月",
+      "romaji": "~kagetsu",
+      "english": "Months counter",
+      "category": "counters",
+      "notes": "Used for counting months (duration); note the special character ヶ",
+      "example": "このプロジェクトは六ヶ月かかりました。 (This project took six months.)"
+    },
+    {
+      "japanese": "〜週間",
+      "romaji": "~shuukan",
+      "english": "Weeks counter",
+      "category": "counters",
+      "notes": "Used for counting weeks",
+      "example": "休暇で二週間日本にいました。 (I was in Japan for two weeks on vacation.)"
+    },
+    {
+      "japanese": "〜日",
+      "romaji": "~nichi/~ka",
+      "english": "Days counter",
+      "category": "counters",
+      "notes": "Used for counting days; has irregular readings for 1-10",
+      "example": "出張で三日間東京にいました。 (I was in Tokyo for three days on a business trip.)"
+    },
+    {
+      "japanese": "一日",
+      "romaji": "tsuitachi",
+      "english": "First day of the month",
+      "category": "counters",
+      "notes": "Special reading for the first day of the month",
+      "example": "一日に新しい仕事を始めます。 (I'll start my new job on the first day of the month.)"
+    },
+    {
+      "japanese": "二日",
+      "romaji": "futsuka",
+      "english": "Two days/second day",
+      "category": "counters",
+      "notes": "Irregular reading for the second day of the month",
+      "example": "二日間京都に滞在しました。 (I stayed in Kyoto for two days.)"
+    },
+    {
+      "japanese": "〜時間",
+      "romaji": "~jikan",
+      "english": "Hours counter",
+      "category": "counters",
+      "notes": "Used for counting hours (duration)",
+      "example": "勉強するのに三時間かかりました。 (It took me three hours to study.)"
+    },
+    {
+      "japanese": "〜時",
+      "romaji": "~ji",
+      "english": "O'clock counter",
+      "category": "counters",
+      "notes": "Used for telling the hour of the day",
+      "example": "会議は九時に始まります。 (The meeting starts at 9 o'clock.)"
+    },
+    {
+      "japanese": "〜分",
+      "romaji": "~fun/~pun",
+      "english": "Minutes counter",
+      "category": "counters",
+      "notes": "Used for counting minutes; varies between fun/pun depending on the number",
+      "example": "あと五分で到着します。 (We will arrive in five minutes.)"
+    },
+    {
+      "japanese": "〜秒",
+      "romaji": "~byou",
+      "english": "Seconds counter",
+      "category": "counters",
+      "notes": "Used for counting seconds",
+      "example": "レースで彼は10秒差で勝ちました。 (He won the race by a margin of 10 seconds.)"
+    },
+    {
+      "japanese": "〜段",
+      "romaji": "~dan",
+      "english": "Steps/levels counter",
+      "category": "counters",
+      "notes": "Used for counting steps, stages, ranks (like in martial arts)",
+      "example": "彼は空手で三段です。 (He is a third-degree black belt in karate.)"
+    },
+    {
+      "japanese": "〜円",
+      "romaji": "~en",
+      "english": "Yen counter",
+      "category": "counters",
+      "notes": "Used for counting Japanese currency (yen)",
+      "example": "このペンは百円です。 (This pen is 100 yen.)"
+    },
+    {
+      "japanese": "〜ドル",
+      "romaji": "~doru",
+      "english": "Dollar counter",
+      "category": "counters",
+      "notes": "Used for counting dollars",
+      "example": "この本は15ドルでした。 (This book was 15 dollars.)"
+    },
+    {
+      "japanese": "〜ページ",
+      "romaji": "~pēji",
+      "english": "Page counter",
+      "category": "counters",
+      "notes": "Used for counting pages",
+      "example": "レポートは十ページ書かなければなりません。 (I must write a ten-page report.)"
+    },
+    {
+      "japanese": "〜話",
+      "romaji": "~wa",
+      "english": "Episodes/stories counter",
+      "category": "counters",
+      "notes": "Used for counting episodes, stories, or chapters",
+      "example": "このアニメの第三話が好きです。 (I like the third episode of this anime.)"
+    },
+    {
+      "japanese": "〜軒",
+      "romaji": "~ken",
+      "english": "Houses/buildings counter",
+      "category": "counters",
+      "notes": "Used for counting houses, shops, and buildings",
+      "example": "この通りにはレストランが五軒あります。 (There are five restaurants on this street.)"
+    },
+    {
+      "japanese": "〜室",
+      "romaji": "~shitsu",
+      "english": "Rooms counter",
+      "category": "counters",
+      "notes": "Used for counting rooms",
+      "example": "このアパートには二室あります。 (This apartment has two rooms.)"
+    },
+    {
+      "japanese": "〜品",
+      "romaji": "~hin",
+      "english": "Items counter",
+      "category": "counters",
+      "notes": "Used for counting articles, items or products",
+      "example": "スーパーで三品買いました。 (I bought three items at the supermarket.)"
+    },
+    {
+      "japanese": "〜語",
+      "romaji": "~go",
+      "english": "Languages counter",
+      "category": "counters",
+      "notes": "Used for counting languages",
+      "example": "彼女は三語話せます。 (She can speak three languages.)"
+    },
+    {
+      "japanese": "〜問",
+      "romaji": "~mon",
+      "english": "Questions counter",
+      "category": "counters",
+      "notes": "Used for counting questions (like on a test)",
+      "example": "テストには二十問ありました。 (There were twenty questions on the test.)"
+    },
+    {
+      "japanese": "〜席",
+      "romaji": "~seki",
+      "english": "Seats counter",
+      "category": "counters",
+      "notes": "Used for counting seats or places at a table",
+      "example": "レストランに四席予約しました。 (I reserved four seats at the restaurant.)"
+    },
+    {
+      "japanese": "〜箇所",
+      "romaji": "~kasho",
+      "english": "Places/spots counter",
+      "category": "counters",
+      "notes": "Used for counting locations or spots",
+      "example": "地図に三箇所印をつけました。 (I marked three places on the map.)"
+    },
+    {
+      "japanese": "〜名様",
+      "romaji": "~mei-sama",
+      "english": "People counter (very polite)",
+      "category": "counters",
+      "notes": "Extremely polite version for counting people, used in service industries",
+      "example": "何名様ですか？ (How many people in your party?)"
+    },
+    {
+      "japanese": "数字",
+      "romaji": "suuji",
+      "english": "Numeral/digit",
+      "category": "number words",
+      "notes": "General term for numbers",
+      "example": "電話番号の数字を教えてください。 (Please tell me the digits of your phone number.)"
+    },
+    {
+      "japanese": "番号",
+      "romaji": "bangou",
+      "english": "Number (assigned)",
+      "category": "number words",
+      "notes": "Used for assigned numbers like phone numbers",
+      "example": "あなたの電話番号は何ですか？ (What is your phone number?)"
+    },
+    {
+      "japanese": "水",
+      "romaji": "mizu",
+      "english": "Water",
+      "category": "food and drink",
+      "notes": "Essential vocabulary",
+      "example": "水をください。 (Water, please.)"
+    },
+    {
+      "japanese": "お茶",
+      "romaji": "ocha",
+      "english": "Tea",
+      "category": "food and drink",
+      "notes": "Green tea",
+      "example": "お茶を飲みます。 (I will drink tea.)"
+    },
+    {
+      "japanese": "コーヒー",
+      "romaji": "koohii",
+      "english": "Coffee",
+      "category": "food and drink",
+      "notes": "Loanword from English",
+      "example": "コーヒーが好きです。 (I like coffee.)"
+    },
+    {
+      "japanese": "ご飯",
+      "romaji": "gohan",
+      "english": "Rice/meal",
+      "category": "food and drink",
+      "notes": "Can mean cooked rice or meal in general",
+      "example": "ご飯を食べましょう。 (Let's eat a meal.)"
+    }
+  ]
+}

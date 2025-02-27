@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Japanese Vocabulary - Japanese Learning App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>語彙</h1>
+            <h2>Vocabulary</h2>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('hiragana') }}">Hiragana</a></li>
+                    <li><a href="{{ url_for('katakana') }}">Katakana</a></li>
+                    <li><a href="{{ url_for('vocabulary') }}" class="active">Vocabulary</a></li>
+                    <li><a href="{{ url_for('flashcards') }}">Flashcards</a></li>
+                    <li><a href="{{ url_for('quiz') }}">Quiz</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="intro">
+                <h2>Japanese Vocabulary</h2>
+                <p>Building a strong vocabulary is essential for mastering Japanese. This section provides you with essential Japanese words organized by level and category.</p>
+            </section>
+
+            <section class="vocabulary-controls">
+                <div class="control-group">
+                    <label for="difficultySelector">Difficulty:</label>
+                    <select id="difficultySelector" class="selector">
+                        <option value="beginner" selected>Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label for="categorySelector">Category:</label>
+                    <select id="categorySelector" class="selector">
+                        <option value="all" selected>All Categories</option>
+                        <option value="greetings">Greetings</option>
+                        <option value="basics">Basic Words</option>
+                        <option value="question words">Question Words</option>
+                        <option value="numbers">Numbers</option>
+                        <option value="counters">Counters</option>
+                        <option value="number words">Numbers Words</option>
+                        <option value="food and drink">Food & Drink</option>
+
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label for="searchInput">Search:</label>
+                    <input type="text" id="searchInput" placeholder="Search words...">
+                </div>
+            </section>
+
+            <section class="vocabulary-container">
+                <div class="vocabulary-list" id="vocabularyList">
+                    <!-- Vocabulary items will be loaded here by JavaScript -->
+                    <div class="loading">Loading vocabulary...</div>
+                </div>
+
+                <div class="pagination">
+                    <button id="prevPage" class="btn small" disabled>Previous</button>
+                    <span class="page-indicator">Page <span id="currentPage">1</span> of <span id="totalPages">1</span></span>
+                    <button id="nextPage" class="btn small" disabled>Next</button>
+                </div>
+            </section>
+
+            <section class="practice-tools">
+                <h2>Practice Tools</h2>
+                <div class="tools-container">
+                    <a href="{{ url_for('flashcards') }}?type=vocabulary" class="btn tool-btn">Vocabulary Flashcards</a>
+                    <a href="{{ url_for('quiz') }}?type=vocabulary" class="btn tool-btn">Vocabulary Quiz</a>
+                </div>
+            </section>
+
+            <section class="learning-tips">
+                <h2>Tips for Learning Vocabulary</h2>
+                <ul>
+                    <li>Learn words in context rather than in isolation.</li>
+                    <li>Group related words together to make associations.</li>
+                    <li>Use spaced repetition to review words at optimal intervals.</li>
+                    <li>Create sentences with new words to reinforce your learning.</li>
+                    <li>Use the flashcard and quiz tools to test your retention.</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Japanese Learning App - Created with Flask</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/vocabulary.js') }}"></script>
+</body>
+</html>

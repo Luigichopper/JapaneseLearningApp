@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Katakana - Japanese Learning App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>カタカナ</h1>
+            <h2>Katakana</h2>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('hiragana') }}">Hiragana</a></li>
+                    <li><a href="{{ url_for('katakana') }}" class="active">Katakana</a></li>
+                    <li><a href="{{ url_for('vocabulary') }}">Vocabulary</a></li>
+                    <li><a href="{{ url_for('flashcards') }}">Flashcards</a></li>
+                    <li><a href="{{ url_for('quiz') }}">Quiz</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="intro">
+                <h2>Introduction to Katakana</h2>
+                <p>Katakana is one of the Japanese writing systems. It's a phonetic script primarily used for foreign words, loan words, technical and scientific terms, and for emphasis. Each character represents a syllable.</p>
+                <p>Katakana characters are more angular and straightforward than hiragana, making them easier to distinguish in some cases.</p>
+            </section>
+
+            <section class="character-selector">
+                <div class="selector-controls">
+                    <button class="selector-tab active" data-type="basic">Basic</button>
+                    <button class="selector-tab" data-type="dakuon">Dakuon</button>
+                    <button class="selector-tab" data-type="combinations">Combinations</button>
+                    <button class="selector-tab" data-type="extended">Extended</button>
+                </div>
+
+                <div class="character-grid" id="katakanaGrid">
+                    <!-- Characters will be loaded here by JavaScript -->
+                    <div class="loading">Loading katakana characters...</div>
+                </div>
+
+                <div class="character-detail" id="characterDetail">
+                    <div class="detail-placeholder">
+                        <p>Select a character to see details and hear pronunciation</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="writing-practice">
+                <h2>Writing Practice</h2>
+                <div class="writing-container">
+                    <div class="writing-example">
+                        <img id="strokeOrderImage" src="" alt="Stroke order" class="hidden">
+                    </div>
+                    <div class="stroke-order-controls">
+                        <button id="prevStroke" class="btn small" disabled>Previous</button>
+                        <button id="nextStroke" class="btn small" disabled>Next</button>
+                        <button id="playAnimation" class="btn small" disabled>Play Animation</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="practice-tools">
+                <h2>Practice Tools</h2>
+                <div class="tools-container">
+                    <a href="{{ url_for('flashcards') }}?type=katakana" class="btn tool-btn">Katakana Flashcards</a>
+                    <a href="{{ url_for('quiz') }}?type=katakana" class="btn tool-btn">Katakana Quiz</a>
+                </div>
+            </section>
+
+            <section class="learning-tips">
+                <h2>Tips for Learning Katakana</h2>
+                <ul>
+                    <li>Focus on learning katakana after you're comfortable with hiragana.</li>
+                    <li>Many katakana characters resemble their hiragana counterparts or have similar stroke patterns.</li>
+                    <li>Practice by trying to read foreign brand names and words that are commonly written in katakana.</li>
+                    <li>Use mnemonics to remember the more challenging shapes.</li>
+                    <li>The extended katakana characters are used to represent sounds that don't exist in traditional Japanese.</li>
+                </ul>
+            </section>
+
+            <section class="common-words">
+                <h2>Common Words Written in Katakana</h2>
+                <div class="common-words-grid">
+                    <div class="word-card">
+                        <p class="japanese">コンピューター</p>
+                        <p class="romaji">konpyūtā</p>
+                        <p class="english">Computer</p>
+                    </div>
+                    <div class="word-card">
+                        <p class="japanese">スマートフォン</p>
+                        <p class="romaji">sumātofon</p>
+                        <p class="english">Smartphone</p>
+                    </div>
+                    <div class="word-card">
+                        <p class="japanese">カフェ</p>
+                        <p class="romaji">kafe</p>
+                        <p class="english">Cafe</p>
+                    </div>
+                    <div class="word-card">
+                        <p class="japanese">ケーキ</p>
+                        <p class="romaji">kēki</p>
+                        <p class="english">Cake</p>
+                    </div>
+                    <div class="word-card">
+                        <p class="japanese">タクシー</p>
+                        <p class="romaji">takushī</p>
+                        <p class="english">Taxi</p>
+                    </div>
+                    <div class="word-card">
+                        <p class="japanese">アメリカ</p>
+                        <p class="romaji">amerika</p>
+                        <p class="english">America</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Japanese Learning App - Created with Flask</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/katakana.js') }}"></script>
+</body>
+</html>

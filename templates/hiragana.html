@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Hiragana - Japanese Learning App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ひらがな</h1>
+            <h2>Hiragana</h2>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('hiragana') }}" class="active">Hiragana</a></li>
+                    <li><a href="{{ url_for('katakana') }}">Katakana</a></li>
+                    <li><a href="{{ url_for('vocabulary') }}">Vocabulary</a></li>
+                    <li><a href="{{ url_for('flashcards') }}">Flashcards</a></li>
+                    <li><a href="{{ url_for('quiz') }}">Quiz</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="intro">
+                <h2>Introduction to Hiragana</h2>
+                <p>Hiragana is one of the Japanese writing systems. It's a phonetic script used for Japanese words, grammatical particles, and word endings. Each character represents a syllable.</p>
+            </section>
+
+            <section class="character-selector">
+                <div class="selector-controls">
+                    <button class="selector-tab active" data-type="basic">Basic</button>
+                    <button class="selector-tab" data-type="dakuon">Dakuon</button>
+                    <button class="selector-tab" data-type="combinations">Combinations</button>
+                </div>
+
+                <div class="character-grid" id="hiraganaGrid">
+                    <!-- Characters will be loaded here by JavaScript -->
+                    <div class="loading">Loading hiragana characters...</div>
+                </div>
+
+                <div class="character-detail" id="characterDetail">
+                    <div class="detail-placeholder">
+                        <p>Select a character to see details and hear pronunciation</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="writing-practice">
+                <h2>Writing Practice</h2>
+                <div class="writing-container">
+                    <div class="writing-example">
+                        <img id="strokeOrderImage" src="" alt="Stroke order" class="hidden">
+                    </div>
+                    <div class="stroke-order-controls">
+                        <button id="prevStroke" class="btn small" disabled>Previous</button>
+                        <button id="nextStroke" class="btn small" disabled>Next</button>
+                        <button id="playAnimation" class="btn small" disabled>Play Animation</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="practice-tools">
+                <h2>Practice Tools</h2>
+                <div class="tools-container">
+                    <a href="{{ url_for('flashcards') }}?type=hiragana" class="btn tool-btn">Hiragana Flashcards</a>
+                    <a href="{{ url_for('quiz') }}?type=hiragana" class="btn tool-btn">Hiragana Quiz</a>
+                </div>
+            </section>
+
+            <section class="learning-tips">
+                <h2>Tips for Learning Hiragana</h2>
+                <ul>
+                    <li>Practice writing each character multiple times.</li>
+                    <li>Learn in small groups of 5-10 characters at a time.</li>
+                    <li>Associate each character with a word that starts with that sound.</li>
+                    <li>Use the audio feature to get familiar with the pronunciation.</li>
+                    <li>Practice reading simple texts written in hiragana.</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Japanese Learning App - Created with Flask</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/hiragana.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,610 @@
+/* Base Styles */
+:root {
+    --primary-color: #e74c3c;
+    --secondary-color: #3498db;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+    --success-color: #2ecc71;
+    --warning-color: #f39c12;
+    --error-color: #e74c3c;
+    --text-color: #333;
+    --border-radius: 4px;
+    --card-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #f5f7fa;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem;
+    color: var(--dark-color);
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    text-align: center;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+}
+
+.btn.small {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+}
+
+.btn.tool-btn {
+    margin: 0 10px 10px 0;
+}
+
+/* Header and Navigation */
+header {
+    margin-bottom: 2rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: var(--dark-color);
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+nav ul li a:hover, nav ul li a.active {
+    background-color: var(--secondary-color);
+    color: white;
+    text-decoration: none;
+}
+
+/* Main Content Sections */
+main {
+    padding: 20px 0;
+}
+
+section {
+    margin-bottom: 3rem;
+    background-color: white;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+}
+
+/* Feature Cards */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.feature-card {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: var(--border-radius);
+    text-align: center;
+    transition: var(--transition);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card h3 {
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    margin-bottom: 20px;
+}
+
+/* Learning Path */
+.learning-path {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.path-step {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: var(--border-radius);
+    position: relative;
+}
+
+.step-number {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--secondary-color);
+    color: white;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+/* Character Grid Styles */
+.character-selector {
+    margin-bottom: 2rem;
+}
+
+.selector-controls {
+    display: flex;
+    margin-bottom: 1rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 10px;
+}
+
+.selector-tab {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.selector-tab:hover, .selector-tab.active {
+    background-color: var(--secondary-color);
+    color: white;
+    border-color: var(--secondary-color);
+}
+
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    gap: 10px;
+    margin-bottom: 2rem;
+}
+
+.character-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.character-card:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-3px);
+}
+
+.character-card.active {
+    border-color: var(--secondary-color);
+    background-color: rgba(52, 152, 219, 0.1);
+}
+
+.character {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.romaji {
+    font-size: 12px;
+    color: #666;
+}
+
+.character-detail {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: var(--border-radius);
+    min-height: 200px;
+}
+
+.detail-placeholder {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+}
+
+.character-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.character-large {
+    font-size: 72px;
+    margin-bottom: 15px;
+}
+
+.character-meta {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.character-controls {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Writing Practice */
+.writing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.writing-example {
+    width: 250px;
+    height: 250px;
+    border: 1px dashed #ddd;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+}
+
+.stroke-order-controls {
+    display: flex;
+    gap: 10px;
+}
+
+/* Quiz Styles */
+.quiz-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.quiz-card {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.quiz-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.quiz-option {
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.quiz-option:hover {
+    background-color: #f1f1f1;
+}
+
+.quiz-option.correct {
+    background-color: rgba(46, 204, 113, 0.2);
+    border-color: var(--success-color);
+}
+
+.quiz-option.incorrect {
+    background-color: rgba(231, 76, 60, 0.2);
+    border-color: var(--error-color);
+}
+
+.quiz-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.quiz-progress {
+    margin-top: 20px;
+    height: 10px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    transition: width 0.3s ease;
+}
+
+/* Flashcard Styles */
+.flashcard-container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.flashcard {
+    height: 300px;
+    perspective: 1000px;
+    margin-bottom: 20px;
+}
+
+.flashcard-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flashcard.flipped .flashcard-inner {
+    transform: rotateY(180deg);
+}
+
+.flashcard-front, .flashcard-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    background-color: white;
+    box-shadow: var(--card-shadow);
+}
+
+.flashcard-back {
+    transform: rotateY(180deg);
+}
+
+.flashcard-character {
+    font-size: 72px;
+    margin-bottom: 20px;
+}
+
+.flashcard-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Vocabulary Styles */
+.vocabulary-container {
+    margin-top: 30px;
+}
+
+.vocabulary-filters {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filter-btn {
+    padding: 8px 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background-color: var(--secondary-color);
+    color: white;
+    border-color: var(--secondary-color);
+}
+
+.vocabulary-list {
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.vocabulary-item {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    transition: var(--transition);
+}
+
+.vocabulary-item:last-child {
+    border-bottom: none;
+}
+
+.vocabulary-item:hover {
+    background-color: #f8f9fa;
+}
+
+.vocabulary-japanese {
+    font-size: 18px;
+    margin-right: 15px;
+}
+
+.vocabulary-english {
+    font-size: 16px;
+    color: #666;
+}
+
+.vocabulary-meta {
+    font-size: 14px;
+    color: #999;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.vocabulary-controls {
+    display: flex;
+    gap: 10px;
+}
+
+/* Helper Classes */
+.hidden {
+    display: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.mb-1 {
+    margin-bottom: 10px;
+}
+
+.mb-2 {
+    margin-bottom: 20px;
+}
+
+.mb-3 {
+    margin-bottom: 30px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    color: #666;
+    font-size: 0.9rem;
+    border-top: 1px solid #ddd;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .learning-path {
+        flex-direction: column;
+    }
+
+    .path-step {
+        margin-bottom: 30px;
+    }
+
+    .character-grid {
+        grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    }
+
+    .quiz-options {
+        grid-template-columns: 1fr;
+    }
+}

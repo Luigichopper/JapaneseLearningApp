@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Flashcards - Japanese Learning App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>フラッシュカード</h1>
+            <h2>Flashcards</h2>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('hiragana') }}">Hiragana</a></li>
+                    <li><a href="{{ url_for('katakana') }}">Katakana</a></li>
+                    <li><a href="{{ url_for('vocabulary') }}">Vocabulary</a></li>
+                    <li><a href="{{ url_for('flashcards') }}" class="active">Flashcards</a></li>
+                    <li><a href="{{ url_for('quiz') }}">Quiz</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="intro">
+                <h2>Study with Flashcards</h2>
+                <p>Flashcards are an effective way to build your Japanese skills through active recall. Click on a card to flip it and reveal the answer.</p>
+            </section>
+
+            <section class="flashcard-options">
+                <div class="control-group">
+                    <label for="studyModeSelector">Study Mode:</label>
+                    <select id="studyModeSelector" class="selector">
+                        <option value="hiragana">Hiragana</option>
+                        <option value="katakana">Katakana</option>
+                        <option value="vocabulary">Vocabulary</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <button id="shuffleCards" class="btn">Shuffle Cards</button>
+                </div>
+
+                <div class="study-tips">
+                    <p><strong>Tip:</strong> Use arrow keys to navigate (←/→) and space bar to flip cards</p>
+                </div>
+            </section>
+
+            <section class="flashcard-container">
+                <!-- Flashcards will be loaded here by JavaScript -->
+                <div class="loading">Loading flashcards...</div>
+            </section>
+
+            <section class="learning-tips">
+                <h2>Effective Flashcard Usage</h2>
+                <ul>
+                    <li>Try to recall the answer before flipping the card.</li>
+                    <li>Study in short, frequent sessions rather than long marathons.</li>
+                    <li>Focus more on the cards you find difficult.</li>
+                    <li>Say the answers out loud to reinforce learning.</li>
+                    <li>After successfully recalling a card several times, move on to more challenging content.</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Japanese Learning App - Created with Flask</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/flashcards.js') }}"></script>
+</body>
+</html>

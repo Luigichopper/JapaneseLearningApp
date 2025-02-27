@@ -1,0 +1,99 @@
+       <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Learning App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>日本語を学ぼう！</h1>
+            <h2>Learn Japanese</h2>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('index') }}" class="active">Home</a></li>
+                    <li><a href="{{ url_for('hiragana') }}">Hiragana</a></li>
+                    <li><a href="{{ url_for('katakana') }}">Katakana</a></li>
+                    <li><a href="{{ url_for('vocabulary') }}">Vocabulary</a></li>
+                    <li><a href="{{ url_for('flashcards') }}">Flashcards</a></li>
+                    <li><a href="{{ url_for('quiz') }}">Quiz</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="welcome">
+                <h2>Welcome to Your Japanese Learning Journey</h2>
+                <p>This application will help you learn Japanese from the ground up, starting with the writing systems and progressing to vocabulary and grammar.</p>
+            </section>
+
+            <section class="features">
+                <div class="feature-card">
+                    <h3>Hiragana</h3>
+                    <p>Learn the basic Japanese phonetic script used for native Japanese words.</p>
+                    <a href="{{ url_for('hiragana') }}" class="btn">Study Hiragana</a>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Katakana</h3>
+                    <p>Master the second Japanese phonetic script used primarily for foreign words.</p>
+                    <a href="{{ url_for('katakana') }}" class="btn">Study Katakana</a>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Vocabulary</h3>
+                    <p>Build your Japanese vocabulary with words organized by difficulty and topic.</p>
+                    <a href="{{ url_for('vocabulary') }}" class="btn">Learn Vocabulary</a>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Flashcards</h3>
+                    <p>Practice and memorize Japanese characters and vocabulary using flashcards.</p>
+                    <a href="{{ url_for('flashcards') }}" class="btn">Use Flashcards</a>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Quiz</h3>
+                    <p>Test your knowledge with quizzes on hiragana, katakana, and vocabulary.</p>
+                    <a href="{{ url_for('quiz') }}" class="btn">Take a Quiz</a>
+                </div>
+            </section>
+
+            <section class="getting-started">
+                <h2>Getting Started</h2>
+                <p>If you're new to Japanese, we recommend starting with Hiragana, the most basic writing system. Once you're comfortable with Hiragana, you can move on to Katakana and then begin learning vocabulary.</p>
+                <div class="learning-path">
+                    <div class="path-step">
+                        <span class="step-number">1</span>
+                        <h4>Hiragana</h4>
+                        <p>Learn the basic phonetic script</p>
+                    </div>
+                    <div class="path-step">
+                        <span class="step-number">2</span>
+                        <h4>Katakana</h4>
+                        <p>Master the second phonetic script</p>
+                    </div>
+                    <div class="path-step">
+                        <span class="step-number">3</span>
+                        <h4>Basic Vocabulary</h4>
+                        <p>Build your first Japanese words</p>
+                    </div>
+                    <div class="path-step">
+                        <span class="step-number">4</span>
+                        <h4>Practice</h4>
+                        <p>Use flashcards and quizzes to test yourself</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Japanese Learning App - Created with Flask</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

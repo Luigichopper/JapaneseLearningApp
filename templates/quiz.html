@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Quiz - Japanese Learning App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>クイズ</h1>
+            <h2>Quiz</h2>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('hiragana') }}">Hiragana</a></li>
+                    <li><a href="{{ url_for('katakana') }}">Katakana</a></li>
+                    <li><a href="{{ url_for('vocabulary') }}">Vocabulary</a></li>
+                    <li><a href="{{ url_for('flashcards') }}">Flashcards</a></li>
+                    <li><a href="{{ url_for('quiz') }}" class="active">Quiz</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="intro">
+                <h2>Test Your Japanese Knowledge</h2>
+                <p>Challenge yourself with quizzes on hiragana, katakana, and vocabulary to assess your progress and reinforce your learning.</p>
+            </section>
+
+            <section class="quiz-container">
+                <!-- Quiz content will be loaded here by JavaScript -->
+                <div class="loading">Loading quiz options...</div>
+            </section>
+
+            <section class="learning-tips">
+                <h2>Quiz Strategy Tips</h2>
+                <ul>
+                    <li>Take a quiz after studying to reinforce what you've learned.</li>
+                    <li>Don't be discouraged by wrong answers; they help identify areas for improvement.</li>
+                    <li>Review material you struggled with before taking the quiz again.</li>
+                    <li>Set goals for your quiz scores and work to improve them over time.</li>
+                    <li>Use the quiz results to guide your future study sessions.</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Japanese Learning App - Created with Flask</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/quiz.js') }}"></script>
+</body>
+</html>
